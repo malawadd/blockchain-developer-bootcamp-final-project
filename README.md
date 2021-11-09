@@ -45,23 +45,21 @@ The Players Flow interacting with the smart contract in the frontend is as follo
 ## Directory Structure
 ```
 📦 DECENTRALIZED_SOCIAL_MEDIA
- ┣ 📂 .github
  ┣ 📂 public
  ┣ 📂 smart-contract
  ┣    ┣ 📂build (recent build of smart contract)
- ┃ 	  ┣ 📂contract(Solidity smart contract)
- ┃	  ┣	📂migration(Truffle deployment migrations)
+ ┃    ┣ 📂contract(Solidity smart contract)
+ ┃    ┣	📂migration(Truffle deployment migrations)
  ┃    ┣ 📂 test (Smart Contract Tests)
  ┃	  ┣ 📜 package.json (project dependencies)
  ┃	  ┗ 📜 truffle-config.js (Truffle Project Config)
  ┃	  
  ┣ 📂 src (Dapp Frontend)
+ ┣ 📜 README.md (Project Documentation) 
  ┣ 📜 avoiding_common_attacks.md
  ┣ 📜 design_pattern_decisions.md
  ┣ 📜 deployed_address.txt (contract address)
- ┣ 📜 README.md (Project Documentation)
- ┣ 
- ┗ 
+ ┗ 📜 package.json (project dependencies) 
 ```
 
 ## Running the project
