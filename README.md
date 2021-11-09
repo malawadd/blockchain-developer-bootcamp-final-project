@@ -82,9 +82,9 @@ In the smart-contract directory :
 
 ## Project Demo
 
-Website 👉 [Generative Wars](https://orange-lake-7069.on.fleek.co/)
+Website 👉 [Abstract Attacks Demo](https://orange-lake-7069.on.fleek.co/)
 
-YouTube 👉 [#](link)
+YouTube 👉 [Project walkthrough](https://youtu.be/2xLrlHg-wpU)
 
 ## Avoiding Common Attacks
 
