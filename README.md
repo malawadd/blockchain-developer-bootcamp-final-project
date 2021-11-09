@@ -60,7 +60,7 @@ The Players Flow interacting with the smart contract in the frontend is as follo
  ┣ 📜 design_pattern_decisions.md
  ┣ 📜 deployed_address.txt (contract address)
  ┣ 📜 README.md (Project Documentation)
- ┣ 📜 
+ ┣ 
  ┗ 
 ```
 
