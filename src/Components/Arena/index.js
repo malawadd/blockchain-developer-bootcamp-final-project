@@ -115,6 +115,17 @@ const [showToast, setShowToast] = useState(false);
     }
  }, [gameContract]);
 
+ const LoadingIndicator = () => {
+  return (
+    <div className="lds-ring">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  );
+};
+
 
 
 
@@ -145,7 +156,7 @@ const [showToast, setShowToast] = useState(false);
               {`💥 Attack ${boss.name}`}
             </button>
           </div>
-          {attackState === 'attacking' && (
+          {attackState === 'Attacking' && (
             <div className="loading-indicator">
               <LoadingIndicator />
               <p>Attacking ⚔️</p>

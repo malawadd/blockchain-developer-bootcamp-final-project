@@ -7,7 +7,10 @@ import './App.css';
 import { transform } from 'typescript';
 import Arena from './Components/Arena';
 import LoadingIndicator from './Components/LoadingIndicator';
+import consensysLogo from './assets/consensys-logo.svg'
 
+const TWITTER_HANDLE = 'consensysacad'
+const CONSENSYS_LINK = `https://consensys.net/academy/`
 
 const App = () => {
 
@@ -85,8 +88,8 @@ const renderContent = () => {
     return (
       <div className="connect-wallet-container">
       <img
-        src="https://i.gifer.com/embedded/download/U1or.gif"
-        alt="U1or Gif"
+        src="https://i.gifer.com/embedded/download/3OFpJ.gif"
+        alt="luffy vs SilorMoon Gif"
       />
       {/* 
       * Button that we will use to trigger wallet connect
@@ -106,7 +109,7 @@ const renderContent = () => {
   }
   
   /*
-     * Scenario #2
+     * Scenario #3
   * If there is a connected wallet and characterNFT, it's time to battle!
      */
     else if ( currentAccount && characterNFT){
@@ -155,7 +158,7 @@ const renderContent = () => {
 
   useEffect(() => {
 
-    //this the function we will call to interact with our contract 
+    //this is the function we will call to interact with our contract 
 
     const fetchNFTMetadata  = async() => {
       console.log('Checking for Character NFT on address:', currentAccount);
@@ -193,19 +196,21 @@ const renderContent = () => {
     <div className="App">
       <div className="container">
         <div className="header-container">
-          <p className="header gradient-text">⚔️ Generative wars  ⚔️</p>
-          <p className="sub-text">you wont win this</p>
+          <p className="header gradient-text">⚔️ Abstract Attacks ⚔️</p>
+          <p className="sub-text">Now, only on Rinkeby testnet </p>
           {renderContent()}
         </div>
-        {/* <div className="footer-container">
-          <img alt="Twitter Logo" className="twitter-logo" src={twitterLogo} />
+        <div className="footer-container">
+          {/* <a className="footer-text">{`Final Project for consensys Academy Bootcamp 2021`}</a> */}
+          <img alt="twitter Logo" className="twitter-logo" src={consensysLogo} />
           <a
             className="footer-text"
-            href={TWITTER_LINK}
+            href={CONSENSYS_LINK}
             target="_blank"
             rel="noreferrer"
-          >{`built with @${TWITTER_HANDLE}`}</a>
-        </div> */}
+          >{`Final Project for consensys Academy Bootcamp 2021`}</a>
+        </div>
+        
       </div>
     </div>
   );
