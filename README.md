@@ -51,8 +51,8 @@ The Players Flow interacting with the smart contract in the frontend is as follo
  ┃    ┣ 📂contract(Solidity smart contract)
  ┃    ┣	📂migration(Truffle deployment migrations)
  ┃    ┣ 📂 test (Smart Contract Tests)
- ┃	  ┣ 📜 package.json (project dependencies)
- ┃	  ┗ 📜 truffle-config.js (Truffle Project Config)
+ ┃    ┣ 📜 package.json (project dependencies)
+ ┃    ┗ 📜 truffle-config.js (Truffle Project Config)
  ┃	  
  ┣ 📂 src (Dapp Frontend)
  ┣ 📜 README.md (Project Documentation) 
