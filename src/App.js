@@ -197,7 +197,7 @@ const renderContent = () => {
       <div className="container">
         <div className="header-container">
           <p className="header gradient-text">⚔️ Abstract Attacks ⚔️</p>
-          <p className="sub-text">Now, only on Rinkeby testnet </p>
+          <p className="sub-text">Now, only on Kovan testnet </p>
           {renderContent()}
         </div>
         <div className="footer-container">

@@ -16,10 +16,11 @@ import "@openzeppelin/contracts/utils/Strings.sol";
 /// @notice Helper function  to encode in Base64
 import "./libraries/Base64.sol";
 
-// import "truffle/console.sol";
+/// @notice using chainlink keepers
+import "@chainlink/contracts/src/v0.8/interfaces/KeeperCompatibleInterface.sol";
 
 /// @notice Abstract Wars NFTGAME contract inherits from ERC721, which is the standard NFT contract!
-contract NFTGAME is ERC721, Ownable {
+contract NFTGAME is ERC721, Ownable, KeeperCompatibleInterface {
     /**
      * @notice hold all character's attributes in a struct.
      * @param characterIndex The index of the character
@@ -79,6 +80,19 @@ contract NFTGAME is ERC721, Ownable {
     }
 
     BigBoss public bigBoss;
+
+    /// @notice keepers Registry address
+
+    address public keepersRegistry = 0x4Cb093f226983713164A62138C3F718A5b595F73;
+
+    /// @notice only keepers modifer .
+    modifier onlyKeepers() {
+        require(
+            msg.sender == keepersRegistry,
+            "Ownable: caller is not keepers registry"
+        );
+        _;
+    }
 
     /**
      * @notice an event for minted NFTS.
@@ -379,6 +393,32 @@ contract NFTGAME is ERC721, Ownable {
      */
 
     function RestoreBossHealth() public onlyOwner {
+        uint256 oldhealth = bigBoss.hp;
+        bigBoss.hp = bigBoss.maxHp;
+        emit RestoreHealth(oldhealth, bigBoss.hp);
+    }
+
+    /**
+     * @notice  keeper implemntaion to restore boss health
+     */
+
+    function checkUpkeep(
+        bytes calldata /* checkData */
+    )
+        external
+        view
+        override
+        returns (
+            bool upkeepNeeded,
+            bytes memory /* performData */
+        )
+    {
+        upkeepNeeded = bigBoss.hp <= 0;
+    }
+
+    function performUpkeep(
+        bytes calldata /* performData */
+    ) external override onlyKeepers {
         uint256 oldhealth = bigBoss.hp;
         bigBoss.hp = bigBoss.maxHp;
         emit RestoreHealth(oldhealth, bigBoss.hp);

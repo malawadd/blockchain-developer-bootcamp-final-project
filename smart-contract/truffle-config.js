@@ -33,27 +33,27 @@ module.exports = {
    */
 
    networks: {
-    development: {
-      host: 'localhost',
-      port: 8545,
-      network_id: '*' // Match any network id
-    },
+    // development: {
+    //   host: 'localhost',
+    //   port: 8545,
+    //   network_id: '*' // Match any network id
+    // },
     // testnets
     // properties
     // network_id: identifier for network based on ethereum blockchain. Find out more at https://github.com/ethereumbook/ethereumbook/issues/110
     // gas: gas limit
     // gasPrice: gas price in gwei
-    ropsten: {
-      provider: () => new HDWalletProvider(process.env.MNENOMIC, "https://ropsten.infura.io/v3/" + process.env.INFURA_API_KEY),
-      network_id: 3,
-      gas: 3000000,
-      gasPrice: 10000000000
-    },
+    // ropsten: {
+    //   provider: () => new HDWalletProvider(process.env.MNENOMIC, "https://ropsten.infura.io/v3/" + process.env.INFURA_API_KEY),
+    //   network_id: 3,
+    //   gas: 3000000,
+    //   gasPrice: 10000000000
+    // },
     kovan: {
-      provider: () => new HDWalletProvider(process.env.MNENOMIC, "https://kovan.infura.io/v3/" + process.env.INFURA_API_KEY),
+      provider: () => new HDWalletProvider(process.env.MNENOMIC,  process.env.KOVAN),
       network_id: 42,
-      gas: 3000000,
-      gasPrice: 10000000000
+      // gas: 3000000,
+      // gasPrice: 10000000000
     },
     rinkeby: {
       provider: () => new HDWalletProvider(process.env.MNENOMIC,  process.env.RINKEBY),

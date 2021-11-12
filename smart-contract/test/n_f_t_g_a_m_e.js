@@ -32,7 +32,7 @@ contract("NFTGAME", function ( accounts ) {
       const bossCharacters = await game.getBigBoss()
       // console.log(bossCharacters)
 
-      return assert.equal(bossCharacters.name,"Elon Musk",`expected only one Boss`)
+      return assert.equal(bossCharacters.name,"Empror",`expected only one Boss`)
 
     });
 
