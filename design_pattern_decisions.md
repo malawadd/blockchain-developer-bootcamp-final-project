@@ -27,3 +27,32 @@ contract NFTGAME is ERC721, Ownable {
  /**
 ```
 
+
+## Oracles
+
+A major limitation of smart contracts is that they can't trigger or initiate their own functions at arbitrary times or under arbitrary conditions. State change will only occur when a transaction is initiated by another account (such as user, oracle, or contract). this project uses chainlink's keeper in order to restore the boss health
+
+```
+unction checkUpkeep(bytes calldata /* checkData */)external view
+
+ override returns (bool upkeepNeeded,bytes memory /* performData */)
+
+ {
+
+ upkeepNeeded = bigBoss.hp <= 0;
+
+ }
+
+  
+
+ function performUpkeep(bytes calldata /* performData */) external override onlyKeepers { 
+ 
+ uint256 oldhealth = bigBoss.hp;
+
+ bigBoss.hp = bigBoss.maxHp;
+
+ emit RestoreHealth(oldhealth, bigBoss.hp);
+
+ }
+```
+
