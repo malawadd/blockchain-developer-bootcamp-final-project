@@ -8,7 +8,7 @@ the game Allows the player to ment one of the three provided NFTs , and attack a
 
 The NFT health is not regainable , so each player have a fixed amount of attack they can land on the boss before it health is depreciated.
 
-The NFT stats in updated in realtime after each attack, and viewable on Openseas and Ripple.
+The NFT stats in updated in realtime after each attack, and viewable on Openseas and rarible.
 
 ## Platform Overview
 
