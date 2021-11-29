@@ -43,7 +43,7 @@ The Players Flow interacting with the smart contract in the frontend is as follo
 ## Directory Structure
 
 ```
-📦 DECENTRALIZED_SOCIAL_MEDIA
+📦 Abstract Attacks
  ┣ 📂 public
  ┣ 📂 smart-contract
  ┣    ┣ 📂build (recent build of smart contract)
