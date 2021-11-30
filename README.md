@@ -71,9 +71,9 @@ In the smart-contract directory :
 
 1. Run `npm i` to install dependencies.
 2. To compile contracts run `truffle compile`
-3. To deploy run `truffle migrate`
-4. To test run `truffle test`
-5. Rrun `ganache-cli` to start a local chain.
+3. To test run `truffle test`
+4. Run `ganache-cli`  on port `7545` to start a local chain.
+5. To deploy run `truffle migrate`
 6. Run `truffle console` to interact with the porject.
 
 ### Frontend/To Start Local Server
